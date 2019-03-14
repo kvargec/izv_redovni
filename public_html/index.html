@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style/stil.css" rel="stylesheet" type="text/css"/>
+        <script>
+            var a=12;
+            var b=13;
+            console.log(a+b);
+            if(a>b){
+                console.log(a);
+            }else{
+                console.log(b);
+            };
+            var tekst="2";
+            for(var i=0;i<10;i++){
+                console.log(tekst+i);
+            }
+            function ispis(tekst){
+                ispisTekst="<h3>"+tekst+"</h3>";
+                document.write(ispisTekst);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <img src="img/slika.jpg" class="card-img-top rounded" alt="Kolači" title="Fini kolači">
+                        <div class="card-body">
+                            <h5 class="card-title">Proizvod 1</h5>
+                            <p class="card-text">
+                                <script>
+                                    document.write("Ovo je proizvod naš");
+                                    ispis("Naslov");
+                                </script>
+                            </p>
+                            <a href="#" class="btn btn-primary">Kupi. Naravno</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <img src="img/slika.jpg" class="card-img-top rounded" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Proizvod 1</h5>
+                            <p class="card-text">Najbolji proizvod ikada</p>
+                            <a href="#" class="btn btn-primary">Kupi. Naravno</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <img src="img/slika.jpg" class="card-img-top rounded" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Proizvod 1</h5>
+                            <p class="card-text">Najbolji proizvod ikada</p>
+                            <a href="#" class="btn btn-primary">Kupi. Naravno</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 bg-dark text-info">
+                    Opla 1
+                </div>
+                <div class="col-sm-12 col-md-6 bg-primary">
+                    Opla 2
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
