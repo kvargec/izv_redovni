@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>jQuery probni</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style/stil.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function(){
+                $("#rezultat").css("background-color","red");
+                $("body").css("background-color","#fcfcfc");
+                $("#klik").click(function(){
+                    //$("#rezultat").toggle("slow");
+                    $("#rezultat").html("Novi neki tekst");
+                });
+                $("#dodaj").on('click',function(){
+                    let tekst="<p>Odličan tekst</p>";
+                    $("#rezultat").append(tekst);
+                });
+                $("#novi").on('click',function(){
+                    let tekst="<h2>Naslov naš</h2>";
+                    $("#rezultat").after(tekst);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <button id="klik" class="btn btn-warning">Sakrij</button>
+                    <button id="dodaj" class="btn btn-danger">Dodaj</button>
+                    <button id="novi" class="btn btn-info">Novi</button>
+                    <div id="rezultat">
+                        Ovo je neki tekst
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

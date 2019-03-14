@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style/stil.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function(){
+               let popis=$("#lista1 li");
+               console.log(popis);
+               popis.each(function(){
+                   $(this).on('click',function(){
+                       $("#lista2").append(this);
+                   });
+               })
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                
+                    <div class="col-lg-6">
+                    <ul id="lista1" class="list-group">
+                        <li class="list-group-item">Pero</li>
+                        <li class="list-group-item">Marina</li>
+                        <li class="list-group-item">Luka</li>
+                        <li class="list-group-item">Lovorka</li>
+                    </ul>
+                        </div>
+                    <div class="col-lg-6">
+                    <ul id="lista2" class="list-group">    
+                    </ul>
+                        </div>
+             
+            </div>
+        </div>
+    </body>
+</html>
