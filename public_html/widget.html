@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style/stil.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+       <script>
+           let pjesme=[
+  {
+    "trajanje": "2.29",
+    "zanr": "blues",
+    "izvodjac": {
+      "first": "Estes",
+      "last": "Spears"
+    },
+    "about": "Cillum ea proident aliquip exercitation. Non amet minim do nostrud est irure ea eiusmod velit. Aliquip magna eu dolor dolor nostrud eiusmod.",
+    "registered": "Monday, October 19, 2015 11:32 AM"
+  },
+  {
+    "trajanje": "3.59",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Margret",
+      "last": "Bond"
+    },
+    "about": "Velit ea esse reprehenderit culpa. Velit magna ex labore adipisicing culpa. Sit culpa officia elit culpa nulla anim elit deserunt ut amet laborum. Ea dolore occaecat consequat elit id exercitation sunt. Nostrud cupidatat exercitation quis ullamco commodo ullamco fugiat incididunt culpa dolor. Irure eiusmod ex nulla pariatur reprehenderit velit ipsum laborum magna qui eu. Enim mollit anim ipsum consectetur labore nulla.",
+    "registered": "Friday, May 26, 2017 2:25 AM"
+  },
+  {
+    "trajanje": "3.24",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Monique",
+      "last": "Day"
+    },
+    "about": "Et sit non consectetur cillum occaecat enim irure. Veniam aliqua laborum enim voluptate dolore aliqua exercitation elit culpa reprehenderit enim veniam commodo dolore. Ut mollit irure qui commodo mollit est ut aliquip et dolore anim id ullamco ad. Ea nisi consequat in sit. Ex ea amet deserunt non. Mollit consequat excepteur culpa cupidatat dolor dolore velit adipisicing ea sit sunt enim excepteur. Consectetur duis labore Lorem ea reprehenderit.",
+    "registered": "Thursday, May 18, 2017 10:19 AM"
+  },
+  {
+    "trajanje": "2.97",
+    "zanr": "blues",
+    "izvodjac": {
+      "first": "Sawyer",
+      "last": "Carr"
+    },
+    "about": "Voluptate ullamco laborum elit nostrud do nulla nulla cillum. Fugiat qui dolor tempor aliquip pariatur amet Lorem. Do est pariatur ipsum aliqua elit sit velit occaecat exercitation excepteur. Amet laboris ullamco irure deserunt laborum esse aute ipsum mollit. Occaecat elit ipsum dolore officia quis commodo magna nostrud commodo non mollit excepteur. Enim in enim exercitation cupidatat deserunt. Nulla ea ex consectetur voluptate ea laboris labore pariatur nisi ea occaecat consequat cupidatat.",
+    "registered": "Friday, December 21, 2018 7:39 PM"
+  },
+  {
+    "trajanje": 3,
+    "zanr": "blues",
+    "izvodjac": {
+      "first": "Sharon",
+      "last": "Glover"
+    },
+    "about": "Amet occaecat Lorem elit consequat anim eiusmod minim cupidatat dolor. Enim pariatur tempor laboris eiusmod incididunt dolor eu. Est aliquip occaecat mollit duis est exercitation voluptate dolor deserunt cillum quis. Cillum nulla irure eiusmod anim tempor incididunt ullamco non nisi do consequat.",
+    "registered": "Tuesday, February 7, 2017 4:12 AM"
+  },
+  {
+    "trajanje": "2.32",
+    "zanr": "blues",
+    "izvodjac": {
+      "first": "Pamela",
+      "last": "Herman"
+    },
+    "about": "Excepteur officia Lorem officia aliquip quis. Non mollit minim laborum magna. Non pariatur ullamco excepteur pariatur elit laboris nulla occaecat consequat esse. Do reprehenderit veniam Lorem laborum ullamco minim adipisicing Lorem est consequat sit consectetur. Sunt ullamco proident exercitation sunt anim quis reprehenderit incididunt. Sit incididunt ullamco tempor laboris culpa.",
+    "registered": "Thursday, November 13, 2014 7:25 AM"
+  },
+  {
+    "trajanje": "2.65",
+    "zanr": "rock",
+    "izvodjac": {
+      "first": "Conrad",
+      "last": "Blackburn"
+    },
+    "about": "Nulla tempor culpa exercitation irure incididunt id quis consequat Lorem. Quis esse culpa veniam laborum. Labore non aliqua occaecat do anim labore ipsum cupidatat anim ut nisi aute sunt mollit.",
+    "registered": "Monday, July 9, 2018 5:38 PM"
+  },
+  {
+    "trajanje": "2.98",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Gwen",
+      "last": "Peters"
+    },
+    "about": "Officia officia consectetur labore nulla commodo cillum occaecat eu voluptate eu aute excepteur. Minim adipisicing laborum aliquip voluptate duis ut duis ea adipisicing. Do adipisicing deserunt excepteur cillum nisi consequat eu tempor consequat eiusmod. Pariatur irure cupidatat excepteur ea veniam laboris eu laborum. Amet cillum incididunt elit commodo tempor dolore dolore ad nisi fugiat in. Ut sit tempor adipisicing nostrud ex laboris consequat.",
+    "registered": "Sunday, January 17, 2016 10:59 AM"
+  },
+  {
+    "trajanje": "3.76",
+    "zanr": "rock",
+    "izvodjac": {
+      "first": "Margo",
+      "last": "Mayo"
+    },
+    "about": "Eu ut ut qui eiusmod ullamco aute mollit elit labore ex. Laborum fugiat in eu elit minim cillum ipsum elit qui esse in ad. Aliquip sint Lorem adipisicing ea excepteur velit velit culpa ad aliquip dolore fugiat. Enim duis irure deserunt irure duis pariatur ut dolor. Mollit labore consectetur culpa non consequat esse. Et do Lorem deserunt sit consequat culpa. Do excepteur commodo nostrud esse nisi nulla anim incididunt cillum mollit mollit aliqua anim.",
+    "registered": "Tuesday, April 14, 2015 6:29 PM"
+  },
+  {
+    "trajanje": "2.29",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Tracy",
+      "last": "Lott"
+    },
+    "about": "Nostrud nulla ullamco adipisicing ad consequat eu pariatur cillum ex anim aliqua consectetur. Esse nisi dolore reprehenderit fugiat amet aliqua sint ullamco. Nostrud eu labore eu laborum do et nostrud deserunt mollit qui fugiat. Aute adipisicing incididunt duis ad commodo in exercitation veniam laborum enim sit. Esse pariatur eu velit et aliqua occaecat eu minim do anim commodo sit veniam et. Do ullamco ipsum veniam minim est fugiat in consequat exercitation ad eu dolore eiusmod excepteur.",
+    "registered": "Monday, May 7, 2018 4:50 PM"
+  },
+  {
+    "trajanje": "2.27",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Kristine",
+      "last": "Howard"
+    },
+    "about": "Reprehenderit dolor dolore adipisicing eiusmod quis magna. Culpa dolore et ex enim occaecat veniam ut elit aute cupidatat ex et. Aliqua ad commodo labore mollit excepteur labore sint amet. Eu occaecat proident veniam id fugiat. In laboris minim ipsum ipsum. Proident voluptate pariatur est sit labore amet incididunt laboris sunt aute exercitation do aliqua veniam. In veniam minim magna cillum commodo pariatur nostrud pariatur.",
+    "registered": "Tuesday, July 7, 2015 9:05 AM"
+  },
+  {
+    "trajanje": "3.44",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Drake",
+      "last": "Avila"
+    },
+    "about": "Voluptate dolore aliqua dolor cupidatat aliqua aute fugiat enim. Eiusmod aute ad qui Lorem veniam voluptate Lorem cillum aute consequat. Esse elit in consequat sunt ex. Dolore anim culpa duis incididunt mollit do qui irure excepteur nulla qui aute do irure.",
+    "registered": "Saturday, September 29, 2018 6:28 AM"
+  },
+  {
+    "trajanje": "2.25",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Atkinson",
+      "last": "Reese"
+    },
+    "about": "Ullamco laboris esse officia adipisicing ea proident labore. Anim ipsum dolore reprehenderit eu nostrud exercitation mollit id commodo qui adipisicing aliqua. Ea eiusmod do eu aliqua duis laboris sit dolor quis magna.",
+    "registered": "Wednesday, September 24, 2014 5:07 PM"
+  },
+  {
+    "trajanje": "2.31",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Janette",
+      "last": "Woods"
+    },
+    "about": "Eiusmod cupidatat exercitation tempor veniam est adipisicing. In minim ex duis veniam excepteur laboris tempor nostrud. Do sint in laboris velit amet nisi non pariatur pariatur duis do. Enim exercitation ipsum id tempor consequat ipsum anim anim amet minim ea elit magna sit. Id sit ipsum nisi eiusmod incididunt veniam quis sint ex ea quis esse reprehenderit.",
+    "registered": "Sunday, June 7, 2015 3:14 PM"
+  },
+  {
+    "trajanje": "3.07",
+    "zanr": "blues",
+    "izvodjac": {
+      "first": "Campos",
+      "last": "Kirk"
+    },
+    "about": "Enim magna et sint sunt ipsum excepteur est qui tempor voluptate exercitation Lorem officia dolor. Dolor incididunt est do deserunt magna commodo excepteur est. Duis laborum consequat duis fugiat esse. Aute dolor occaecat mollit dolore laboris reprehenderit pariatur duis consectetur aliquip irure exercitation cillum voluptate. Velit laborum consequat ullamco aliqua eu.",
+    "registered": "Sunday, January 24, 2016 3:38 PM"
+  },
+  {
+    "trajanje": "3.84",
+    "zanr": "rock",
+    "izvodjac": {
+      "first": "Lancaster",
+      "last": "Allison"
+    },
+    "about": "Exercitation aute deserunt non ipsum. Cupidatat velit nulla culpa magna ut. Sunt ut incididunt eu esse commodo dolor mollit consequat aliquip veniam aliqua pariatur id excepteur. Excepteur ullamco mollit pariatur velit cillum aute commodo. Proident exercitation ipsum mollit occaecat dolore minim. Ex exercitation ullamco exercitation non dolor duis voluptate amet ipsum enim fugiat. Ut labore veniam voluptate culpa in veniam sit.",
+    "registered": "Friday, August 21, 2015 12:24 AM"
+  },
+  {
+    "trajanje": "2.24",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Strickland",
+      "last": "Little"
+    },
+    "about": "Ad ea nisi ex veniam. Dolore aliqua proident veniam aliqua officia quis aute fugiat ea nostrud veniam cupidatat culpa. Sunt eiusmod cupidatat pariatur officia aliqua sint laboris commodo magna eu adipisicing commodo eu. Excepteur enim labore do proident sint pariatur ea amet ad nulla. Est tempor aliqua fugiat ipsum dolore laborum sit dolore consequat deserunt ad. Do sit enim id duis incididunt esse officia incididunt minim. Cupidatat cupidatat quis reprehenderit pariatur do.",
+    "registered": "Wednesday, November 14, 2018 6:12 AM"
+  },
+  {
+    "trajanje": "3.89",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Linda",
+      "last": "Miles"
+    },
+    "about": "Sit officia officia ipsum elit esse qui in esse ut commodo ad et. Do commodo dolor proident sunt amet cupidatat magna consequat laboris. Ipsum incididunt culpa irure cupidatat incididunt do.",
+    "registered": "Thursday, November 20, 2014 11:27 PM"
+  },
+  {
+    "trajanje": "2.63",
+    "zanr": "rock",
+    "izvodjac": {
+      "first": "Dodson",
+      "last": "Coleman"
+    },
+    "about": "Enim magna ipsum amet dolore excepteur enim. Reprehenderit in voluptate deserunt do nulla non irure Lorem amet. Ex excepteur officia aliqua dolor dolore amet laborum. Laboris reprehenderit cillum sunt quis nisi sit Lorem voluptate anim eiusmod eiusmod do consectetur nisi. Sit exercitation quis ex et deserunt dolore id laborum.",
+    "registered": "Wednesday, January 10, 2018 5:06 AM"
+  },
+  {
+    "trajanje": "2.87",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Frazier",
+      "last": "Frazier"
+    },
+    "about": "Minim culpa ex ea laborum aliqua tempor. Eu nulla ea in commodo cillum esse ex ex incididunt. Laborum adipisicing eu ad cupidatat velit culpa. Occaecat sunt consequat est irure ullamco labore enim proident.",
+    "registered": "Sunday, March 6, 2016 6:47 PM"
+  },
+  {
+    "trajanje": "3.04",
+    "zanr": "blues",
+    "izvodjac": {
+      "first": "Catalina",
+      "last": "Clemons"
+    },
+    "about": "Elit aliqua sit enim dolor excepteur minim quis et sunt exercitation Lorem cupidatat. Minim incididunt ipsum sint anim amet. Consequat ut cupidatat nisi eu Lorem sunt ullamco quis dolore Lorem officia. Tempor mollit ullamco ipsum et enim dolore proident ex dolore eiusmod. Proident commodo do aliquip velit reprehenderit. Enim tempor esse nostrud adipisicing exercitation in ad non fugiat proident pariatur duis id elit.",
+    "registered": "Sunday, January 1, 2017 5:44 AM"
+  },
+  {
+    "trajanje": "2.67",
+    "zanr": "pop",
+    "izvodjac": {
+      "first": "Adriana",
+      "last": "Grimes"
+    },
+    "about": "Reprehenderit laborum irure veniam occaecat amet consequat occaecat est. Et culpa Lorem irure commodo elit officia. Dolore reprehenderit nulla cupidatat cupidatat laboris cupidatat commodo sunt anim cillum ex excepteur aliquip.",
+    "registered": "Friday, April 4, 2014 5:18 PM"
+  },
+  {
+    "trajanje": "2.92",
+    "zanr": "rock",
+    "izvodjac": {
+      "first": "Holland",
+      "last": "Fuller"
+    },
+    "about": "Aliquip consequat sint elit eu ex dolor. Aliquip est elit excepteur ex et ad reprehenderit ea esse reprehenderit tempor deserunt ad. Id consectetur duis do duis amet qui proident ea. Excepteur consectetur quis nisi tempor est sint reprehenderit. Velit velit id ea enim consequat ex ut.",
+    "registered": "Sunday, March 16, 2014 11:45 AM"
+  },
+  {
+    "trajanje": "3.97",
+    "zanr": "rock",
+    "izvodjac": {
+      "first": "Liza",
+      "last": "Fleming"
+    },
+    "about": "Cillum sunt occaecat occaecat sint incididunt sit ad tempor et Lorem cillum. Officia do eu labore laboris magna culpa officia elit minim. Quis anim irure quis ea in. Nisi voluptate adipisicing consequat nisi irure nisi eiusmod duis. Laboris ex minim eiusmod proident commodo laborum reprehenderit labore consectetur veniam nisi adipisicing. Dolore veniam qui veniam do. Adipisicing incididunt ex adipisicing elit ipsum.",
+    "registered": "Monday, January 28, 2019 2:26 AM"
+  },
+  {
+    "trajanje": "3.71",
+    "zanr": "rock",
+    "izvodjac": {
+      "first": "Mcfadden",
+      "last": "Graham"
+    },
+    "about": "Anim pariatur qui nisi nisi elit occaecat magna sunt. Sit ea dolore duis fugiat minim. Mollit reprehenderit dolore aliquip nostrud in elit quis deserunt amet est qui aliquip veniam aliqua. Eu nisi excepteur id qui sint cupidatat deserunt adipisicing eiusmod minim sunt. Mollit est ex duis veniam ad do dolore esse fugiat qui.",
+    "registered": "Tuesday, March 27, 2018 4:54 PM"
+  },
+  {
+    "trajanje": "2.97",
+    "zanr": "rock",
+    "izvodjac": {
+      "first": "Beatriz",
+      "last": "Donaldson"
+    },
+    "about": "Ullamco magna velit non commodo voluptate id ea dolore adipisicing sunt ad occaecat mollit incididunt. Et labore do fugiat cillum commodo aute Lorem est magna do enim fugiat irure pariatur. Dolore irure officia reprehenderit mollit culpa ad.",
+    "registered": "Monday, November 13, 2017 3:52 PM"
+  },
+  {
+    "trajanje": "3.44",
+    "zanr": "blues",
+    "izvodjac": {
+      "first": "Adrian",
+      "last": "Nguyen"
+    },
+    "about": "Mollit veniam Lorem voluptate labore officia laboris. Commodo excepteur irure pariatur non esse est ex officia irure et excepteur cupidatat magna. Enim ea adipisicing culpa officia officia ullamco qui magna duis cillum veniam.",
+    "registered": "Thursday, April 9, 2015 11:38 PM"
+  }
+];
+    $(document).ready(function(){
+          let zaPopis='<ul class="list-group">';
+          for(pje of pjesme){
+              zaPopis+='<li class="list-group-item">';
+              zaPopis+=pje.izvodjac.first+' '+pje.izvodjac.last;
+              zaPopis+='</li>';
+          }
+          zaPopis+='</ul>';
+          $("#popis").html(zaPopis);
+          $("#popis ul li").each(function(){
+              $(this).on('click',function(){
+                  let tekst=$(this).html();
+                  $("#player").html(tekst);
+                  $("#popis ul").find(".active").each(function(){
+                      $(this).removeClass("active");
+                  }) 
+                  $(this).addClass("active");
+              })
+          });
+          $("#play").on('click',function(){
+              let tekst=$("#player").html();
+              console.log(tekst);
+              if(tekst.trim()!=''){
+                  let zaPlay="-svira trenutno";
+                  if(tekst.indexOf(zaPlay,tekst)>-1){                 
+                      
+                  }else{
+                      tekst+=zaPlay;
+                  }
+                  $("#player").html(tekst);
+              }else{
+                  
+              }
+          });
+          $("#back").on('click',function(){
+              let kojiTrenutno=$("#popis ul").find(".active");
+              let pret=kojiTrenutno.prev();
+              console.log($.isEmptyObject(pret));
+              if(pret.length){
+                  $("#player").html(pret.html());
+                $("#popis ul").find(".active").each(function(){
+                    $(this).removeClass("active");
+                }) 
+                $(pret).addClass("active");
+              }
+              
+          });
+          $("#fast").on('click',function(){
+              let kojiTrenutno=$("#popis ul").find(".active");
+              let slije=kojiTrenutno.next();
+              console.log($.isEmptyObject(slije));
+              if(slije.length){
+                  $("#player").html(slije.html());
+                $("#popis ul").find(".active").each(function(){
+                    $(this).removeClass("active");
+                }) 
+                $(slije).addClass("active");
+              }
+              
+          })
+    });
+       </script>
+    </head>
+    <body>
+         <div class="container">
+            <div class="row">
+                
+                    <div class="col-lg-8">
+                        <div id="player" class="col-lg-12">
+                            
+                        </div>
+                        <div id="kontrole" class="col-lg-12 badge-dark border p-2">
+                            <i id="back" class="fas fa-2x fa-fast-backward"></i>
+                            <i id="play" class="fas fa-2x fa-play"></i>
+                            <i id="stop" class="fas fa-2x fa-stop"></i>
+                            <i id="fast" class="fas fa-2x fa-fast-forward"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div id="popis" class="col-lg-12 bg-info">
+                            
+                        </div>
+                    </div>
+                
+                    
+            </div>
+                
+         </div>
+    </body>
+</html>

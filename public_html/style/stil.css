@@ -10,3 +10,6 @@ and open the template in the editor.
 .text-info{
     color:#fefefe !important;
 }
+#player{
+    min-height:600px;
+}

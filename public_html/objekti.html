@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style/stil.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script>
+            let pro1={naziv:"Salata",mj:"kg",kolicina:0.2,cijena:40.00};
+            let pro2={naziv:"Mesina",mj:"kg",kolicina:1,cijena:55.00};
+            let proizvodi=[
+                {naziv:"Salata",mj:"kg",kolicina:0.2,cijena:40.00},
+                {naziv:"Mesina",mj:"kg",kolicina:1,cijena:55.00}];
+            let pro3={naziv:"Jogurt",mj:"l",kolicina:0.3,cijena:37.00};
+            proizvodi.push(pro3);
+        </script>
+    </head>
+    <body>
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-group">
+                    <script>
+                        for(pro of proizvodi){
+                            let temp='<li class="list-group-item">';
+                            temp+=pro.naziv;
+                            temp+=', '+pro.kolicina;
+                            temp+=', '+pro.cijena;
+                            temp+=', '+pro.kolicina*pro.cijena;
+                            temp+='</li>';
+                            document.write(temp);
+                        }
+                    </script>
+                    </ul>
+                </div>
+                    
+            </div>
+                
+         </div>
+    </body>
+</html>
